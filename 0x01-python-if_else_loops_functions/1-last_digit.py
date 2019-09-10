@@ -4,9 +4,9 @@ number = random.randint(-10000, 10000)
 copyNumber = number
 
 if copyNumber < 0:
-    copyNumber = copyNumber * (-1)
+    copyNumber = -copyNumber
     lastDigit = copyNumber % 10
-    lastDigit = lastDigit * (-2)
+    lastDigit = lastDigit * (-1)
 else:
     lastDigit = copyNumber % 10
 print("last digit of ", end='')
