@@ -9,7 +9,7 @@ if copyNumber < 0:
     lastDigit = lastDigit * (-1)
 else:
     lastDigit = copyNumber % 10
-print("last digit of ", end='')
+print("Last digit of", end=" ")
 
 if lastDigit > 5:
     print("{} is {} and is greater than 5". format(number, lastDigit))
