@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 for n in range(122, 96, -1):
     if n % 2 == 0:
-        pass
+        count = 0
     else:
-        n = n - 32
-    print("{}".format(chr(n)), end="")
+        count = -32
+    print("{:c}".format(n + count), end="")
