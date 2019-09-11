@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 for n in range(122, 96, -1):
-    if (n % 2 != 0):
-        letra = n - 32
+    if (n % 2 == 0):
+        pass
     else:
-        letra = n
-    print("{:c}". format(letra), end="")
+        n = n - 32
+    print("{:c}". format(n), end="")
