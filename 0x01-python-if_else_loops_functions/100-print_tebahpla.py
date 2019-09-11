@@ -4,4 +4,4 @@ for n in range(122, 96, -1):
         pass
     else:
         n = n - 32
-    print("{:c}". format(n), end="")
+    print("{}". format(chr(n)), end="")
