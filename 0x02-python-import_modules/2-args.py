@@ -2,7 +2,8 @@
 import sys
 from calculator_1 import sub
 n = 0
-countArgv = len(sys.argv)
+argvs = sys.argv
+countArgv = len(argvs)
 argvReal = sub(countArgv, 1)
 if argvReal == 0:
     print("{} arguments.".format(argvReal))
