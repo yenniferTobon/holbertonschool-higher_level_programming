@@ -11,4 +11,4 @@ else:
     print("{} arguments:".format(argvReal))
 
 for n in range(1, countArgv):
-    print("{}: {}".format(n, (sys.argv[n])))
+    print("{}: {}".format(n, (argvs[n])))
