@@ -12,5 +12,5 @@ if __name__ == '__main__':
         print("{} argument:".format(argvReal))
     else:
         print("{} arguments:".format(argvReal))
-    for n in range(1, countArgv):
-        print("{}: {}".format(n, (argvs[n])))
+    for n in range(1, argvReal + 1):
+        print("{}: {}".format(n, argvs[n]))
