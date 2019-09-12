@@ -7,6 +7,8 @@ countArgv = len(argvs)
 argvReal = sub(countArgv, 1)
 if argvReal == 0:
     print("{} arguments.".format(argvReal))
+elif argvReal == 1:
+    print("{} argument:".format(argvReal))
 else:
     print("{} arguments:".format(argvReal))
 
