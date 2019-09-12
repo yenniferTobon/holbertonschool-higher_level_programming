@@ -12,5 +12,5 @@ elif argvReal == 1:
 else:
     print("{} arguments:".format(argvReal))
 
-for n in range(1, countArgv):
+for n in range(1, argvReal + 1):
     print("{}: {}".format(n, (argvs[n])))
