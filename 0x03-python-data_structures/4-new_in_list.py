@@ -6,6 +6,6 @@ def new_in_list(my_list, idx, element):
         return (new_list)
     elif (idx >= lenList):
         return (new_list)
-    new_list.remove(idx)
+    new_list.remove(idx + 1)
     new_list.insert(idx, element)
     return (new_list)
