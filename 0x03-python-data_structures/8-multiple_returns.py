@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
-    if sentence is None:
-        firts = "None"
+    if sentence == 0:
+        firts = None
     else:
         firts = sentence[0]
     lenString = len(sentence)
