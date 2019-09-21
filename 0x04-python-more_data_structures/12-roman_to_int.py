@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if type(roman_string) != str or roman_string == 'None':
+    if type(roman_string) != str or roman_string == 'None' or roman_string.isdigit():
         return 0 
     new_list = []
     suma = 0
