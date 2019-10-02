@@ -20,7 +20,7 @@ class Square:
     def position(self):
         return self.__position
 
-    @size.setter
+    @position.setter
     def position(self, position):
         if (type(position) != tuple or
                 len(position) != 2 or
