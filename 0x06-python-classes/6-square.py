@@ -32,11 +32,14 @@ class Square:
         self.__position = position
 
     def area(self):
+        """ square area """
         return self.__size * self.__size
 
     def my_print(self):
+        """ print square """
         if self.__size == 0:
             print()
+            return
         for i in range(self.__position[1]):
             print()
         for l in range(self.__size):
