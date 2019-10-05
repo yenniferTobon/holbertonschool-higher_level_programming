@@ -1,21 +1,47 @@
 
 =============================================
-    Import module: 
+    Import module:
     >>> add_integer = __import__('0-add_integer').add_integer
 
---------------------------------------------
 
-    Should return the sum of two integers:
+test 1: Should return the sum of two integers:
+:: 
     >>> add_integer(7, 5)
     12
 
----------------------------------------------
 
-    Should return an error:
-    >>> add_integer(None, None)
+test 2: The sum two floats should return a integer:
+::
+    >>> type(add_integer(1.0, 3.0))
+    <class 'int'>
+
+
+test 3: Should return an integer from 'a' as string, 'b' as int
+::
+    >>> add_integer('Hola', 5)
     Traceback (most recent call last):
     ...
-    TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
-    
+    TypeError: a must be an integer
 
+
+test 4: Should return an integer from 'a' as int, 'b' as float
+::
+    >>> add_integer(5, 'hola')
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+
+test 5: Should return an integer from 'a' as empty space, 'b' a int
+    >>> print(add_integer( , 6))
+    Traceback (most recent call last):
+    ...
+    SyntaxError: invalid syntax
+
+
+test 6: Should return an integer from 'a' as empty space, 'b' as empty space
+    >>> print(add_integer())
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
 
