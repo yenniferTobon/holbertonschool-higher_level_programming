@@ -1,5 +1,9 @@
+#0-add_integer.py
+----------------------------------------------------------------------
+a and b must be integers or floats, otherwise raise a TypeError 
+exception with the message a must be an integer or b must be an integer
+-----------------------------------------------------------------------
 
-=============================================
     Import module:
     >>> add_integer = __import__('0-add_integer').add_integer
 
@@ -45,3 +49,6 @@ test 6: Should return an integer from 'a' as empty space, 'b' as empty space
     ...
     TypeError: add_integer() missing 1 required positional argument: 'a'
 
+test 7: Should return an integer from 'a' as negative number, 'b' as int
+    >>> print(add_integer(-2, 1))
+    -1
