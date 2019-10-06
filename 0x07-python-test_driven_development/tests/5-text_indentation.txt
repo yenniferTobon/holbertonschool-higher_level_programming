@@ -1,1 +1,68 @@
-.
+#5-text_indentation.py
+
+----------------------------------------------------------------------------------------------
+Write a function that prints a text with 2 new lines after each of these characters: ., ? and :
+-----------------------------------------------------------------------------------------------
+
+
+import module
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+test 1:
+::
+    >>> text_indentation("  Hola?")
+    Hola?
+    <BLANKLINE>
+
+test 2:¬
+::
+    >>> text_indentation("hola?    Yenn.")
+    hola?
+    <BLANKLINE>
+    Yenn.
+    <BLANKLINE>
+
+test 3:
+::
+    >>> text_indentation("")
+
+
+test 4:
+::
+    >>> text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+test 5:
+::
+    >>> text_indentation(1)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+test 6:
+::
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+test 7:
+::
+    >>> text_indentation("Holberton. School? How are you: John")
+    Holberton.
+    <BLANKLINE>
+    School?
+    <BLANKLINE>
+    How are you:
+    <BLANKLINE>
+    John
+
+test 8:
+::
+    >>> text_indentation("?Hi Baby.")
+    ?
+    <BLANKLINE>
+    Hi Baby.
+    <BLANKLINE>
