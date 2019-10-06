@@ -7,7 +7,7 @@
 import modulo 
     >>> print_square = __import__('4-print_square').print_square
 
-test 1:
+test 1: Negative int
 ::
     >>> print_square(-1)
     Traceback (most recent call last):
@@ -15,7 +15,7 @@ test 1:
     ValueError: size must be >= 0
 
 
-test 2:
+test 2: String
 ::
     >>> print_square("Hola")
     Traceback (most recent call last):
@@ -23,7 +23,7 @@ test 2:
     TypeError: unorderable types: str() < int()
 
 
-test 3:
+test 3: Nothing arguments
 ::
     >>> print_square()
     Traceback (most recent call last):
@@ -39,7 +39,7 @@ test 4:
     ValueError: size must be >= 0
 
 
-test 5:
+test 5: Float
 ::
     >>> print_square(2.5)
     Traceback (most recent call last):
@@ -47,7 +47,7 @@ test 5:
     TypeError: size must be an integer
 
 
-test 6:
+test 6: String
 ::
     >>> print_square("@")
     Traceback (most recent call last):
@@ -55,13 +55,20 @@ test 6:
     TypeError: unorderable types: str() < int()
    
 
-test 7:
+test 7: Integer
 ::
     >>> print_square(2)
     ##
     ##
 
-test 8:
+test 8: zero 
 ::
     >>> print_square(0)
 
+
+test 9: two arguments
+:: 
+    >>> print_square(2, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() takes 1 positional argument but 2 were given
