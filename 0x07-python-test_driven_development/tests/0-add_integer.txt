@@ -125,10 +125,27 @@ test 15: Should return an integer from 'a' as string
     ...
     TypeError: a must be an integer
 
-
 test 16: Should return an integer from 'a' as int, 'b' as None
 ::
     >>> add_integer(5, None)
     Traceback (most recent call last):
     ...
     TypeError: b must be an integer
+
+test 17:
+::    
+    >>> add_integer([1, 2, 3])
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+test 18:
+::
+    >>> add_integer((1, 2, 3))
+    Traceback (most recent call last): 
+    TypeError: a must be an integer
+
+test 19:
+::
+    >>> add_integer({"a": 1, "b": 2, "c": 3})
+    Traceback (most recent call last):
+    TypeError: a must be an integer
