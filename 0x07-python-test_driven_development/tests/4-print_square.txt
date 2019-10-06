@@ -36,7 +36,7 @@ test 4:
     >>> print_square(-2.5)
     Traceback (most recent call last):
     ...
-    ValueError: size must be >= 0
+    TypeError: size must be an integer
 
 
 test 5: Float
@@ -79,3 +79,6 @@ test 10: None
     Traceback (most recent call last):
     ...
     TypeError: unorderable types: NoneType() < int()
+
+    >>> print_square(1)
+    #
