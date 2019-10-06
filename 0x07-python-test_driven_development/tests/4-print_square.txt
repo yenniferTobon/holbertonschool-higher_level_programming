@@ -20,8 +20,7 @@ test 2: String
     >>> print_square("Hola")
     Traceback (most recent call last):
     ...
-    TypeError: unorderable types: str() < int()
-
+    TypeError: size must be an integer
 
 test 3: Nothing arguments
 ::
@@ -52,8 +51,7 @@ test 6: String
     >>> print_square("@")
     Traceback (most recent call last):
     ...
-    TypeError: unorderable types: str() < int()
-   
+    TypeError: size must be an integer
 
 test 7: Integer
 ::
@@ -78,7 +76,7 @@ test 10: None
     >>> print_square(None)
     Traceback (most recent call last):
     ...
-    TypeError: unorderable types: NoneType() < int()
+    TypeError: size must be an integer
 
     >>> print_square(1)
     #
