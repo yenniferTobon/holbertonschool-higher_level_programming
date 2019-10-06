@@ -78,4 +78,4 @@ test 10: None
     >>> print_square(None)
     Traceback (most recent call last):
     ...
-    TypeError: unorderable types: NoneType() < int()    
+    TypeError: unorderable types: NoneType() < int()
