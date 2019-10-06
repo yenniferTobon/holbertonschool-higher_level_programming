@@ -1,119 +1,48 @@
-#0-add_integer.py
-----------------------------------------------------------------------
-a and b must be integers or floats, otherwise raise a TypeError 
-exception with the message a must be an integer or b must be an integer
------------------------------------------------------------------------
+==============================
+How to use 5-text_indentation.py
+==============================
 
-    Import module:
-    >>> add_integer = __import__('0-add_integer').add_integer
+Import file
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
 
+Correct Usage:
 
-test 1: Should return the sum of two integers:
-:: 
-    >>> add_integer(7, 5)
-    12
+    >>> t=" : . ? "
 
-
-test 2: The sum two floats should return a integer:
-::
-    >>> type(add_integer(1.0, 3.0))
-    <class 'int'>
+Output for this function should be las this
+>>> t="Hello. : \nI am a string? .\n"
 
 
-test 3: Should return an integer from 'a' as string, 'b' as int
-::
-    >>> add_integer('Hola', 5)
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
+t is equal to: 
+
+>>> t=" : . ? "
 
 
-test 4: Should return an integer from 'a' as int, 'b' as float
-::
-    >>> add_integer(5, 'hola')
-    Traceback (most recent call last):
-    ...
-    TypeError: b must be an integer
+On Errors:
 
+empty string: 
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
 
-test 5: Should return an integer from 'a' as empty space, 'b' a int
-::    
-    >>> print(add_integer( , 6))
-    Traceback (most recent call last):
-    ...
-    SyntaxError: invalid syntax
+more than one string
+>>> text_indentation("ble", "ooh", "wah")
+Traceback (most recent call last):
+TypeError: text_indentation() takes 1 positional argument but 3 were given
 
+>>> text_indentation(19)
+Traceback (most recent call last):
+TypeError: text must be a string
 
-test 6: Should return an integer from 'a' as empty space, 'b' as empty space
-::    
-    >>> print(add_integer())
-    Traceback (most recent call last):
-    ...
-    TypeError: add_integer() missing 1 required positional argument: 'a'
+>>> text_indentation("")
 
-test 7: Should return an integer from 'a' as negative number, 'b' as int
-::    
-    >>> print(add_integer(-2, 1))
-    -1
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
 
-test 8: Should return an integer from 'a' as int, without 'b'
-::
-    >>> print(add_integer(8))
-    106
+>>> text_indentation("Holberton.")
+Holberton.
+<BLANKLINE>
 
-test 9: Should return an integer from 'a' as int, 'b' is None
-::
-    >>> print(add_integer(8, None))
-    Traceback (most recent call last):
-    ...
-    TypeError: b must be an integer
-
-test 10: Should return an integer from 'a' as float, without 'b'
-::
-    >>> print(add_integer(4.0))
-    102
-
-test 11: Should return an integer from 'a' as None, 'b' as None
-::
-    >>> print(add_integer(None, None))
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
-
-test 12: Should return an integer from 'a' as None, 'b' as None
-::
-    >>> print(add_integer(float('Yenn')))
-    Traceback (most recent call last):
-    ...
-    ValueError: could not convert string to float: 'Yenn'
-
-test 13: Should return an integer from 'a' as large int, 'b' as int
-::
-    >>> print(add_integer(987654321987654321, 1))
-    987654321987654322
-
-test 14: Should return an integer from 'a' as float, 'b' as negative int
-::
-    >>> print(add_integer(1.0, -5))
-    -4
-
-test 14: Should return an integer from 'a' string, 'b' as negative int
-::
-    >>> print(add_integer(float('house'), -5))
-    Traceback (most recent call last):
-    ...
-    ValueError: could not convert string to float: 'house'
-
-test 14: Three Arguments
-::
-    >>> print(add_integer(1, 2, 3))
-    Traceback (most recent call last):
-    ...
-    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
-
-test 14: Should return an integer from 'a' as None
-::
-    >>> print(add_integer(None))
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
+>>> text_indentation("Hello")
+Hello
