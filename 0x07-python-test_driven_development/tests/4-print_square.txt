@@ -72,3 +72,10 @@ test 9: two arguments
     Traceback (most recent call last):
     ...
     TypeError: print_square() takes 1 positional argument but 2 were given
+
+test 10: None
+::
+    >>> print_square(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: unorderable types: NoneType() < int()    
