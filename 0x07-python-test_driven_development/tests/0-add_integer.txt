@@ -79,3 +79,41 @@ test 11: Should return an integer from 'a' as None, 'b' as None
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
+
+test 12: Should return an integer from 'a' as None, 'b' as None
+::
+    >>> print(add_integer(float('Yenn')))
+    Traceback (most recent call last):
+    ...
+    ValueError: could not convert string to float: 'Yenn'
+
+test 13: Should return an integer from 'a' as large int, 'b' as int
+::
+    >>> print(add_integer(987654321987654321, 1))
+    987654321987654322
+
+test 14: Should return an integer from 'a' as float, 'b' as negative int
+::
+    >>> print(add_integer(1.0, -5))
+    -4
+
+test 14: Should return an integer from 'a' string, 'b' as negative int
+::
+    >>> print(add_integer(float('house'), -5))
+    Traceback (most recent call last):
+    ...
+    ValueError: could not convert string to float: 'house'
+
+test 14: Three Arguments
+::
+    >>> print(add_integer(1, 2, 3))
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+test 14: Should return an integer from 'a' as None
+::
+    >>> print(add_integer(None))
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
