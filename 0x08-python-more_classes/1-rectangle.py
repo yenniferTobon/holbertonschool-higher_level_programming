@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 class Rectangle:
     """
-    Rectangle class
+    class Rectangulo
     """
-    def __init__(self, width=0, heigth=0):
+    def __init__(self, width=0, height=0):
         self.width = width
-        self.heigth = heigth
+        self.height = height
 
     @property
     def width(self):
@@ -20,13 +20,13 @@ class Rectangle:
         self.__width = value
 
     @property
-    def heigth(self):
-        return self.__heigth
+    def height(self):
+        return self.__height
 
-    @heigth.setter
-    def heigth(self, value):
+    @height.setter
+    def height(self, value):
         if type(value) is not int:
-            raise TypeError("heigth must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("heigth must be >= 0")
-        self.__heigth = value
+            raise ValueError("height must be >= 0")
+        self.__height = value
