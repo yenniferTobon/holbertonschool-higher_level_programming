@@ -6,6 +6,7 @@ This module contains the classes:
 -Rectangle.
 """
 
+
 class Rectangle(BaseGeometry):
     """
     Class that defines basic geometries.
@@ -26,7 +27,7 @@ class Rectangle(BaseGeometry):
         return self.__width * self.__height
 
     def __str__(self):
-       """
-       Method called when using print()
-       """
-       return "{} {}/{}".format("[Rectangle]", self.__width, self.__height)
+        """
+        Method called when using print()
+        """
+        return "{} {}/{}".format("[Rectangle]", self.__width, self.__height)
