@@ -6,6 +6,7 @@ This module contains the classes:
 -Rectangle.
 """
 
+
 class Rectangle(BaseGeometry):
     """
     Class that defines basic geometries.
@@ -16,5 +17,5 @@ class Rectangle(BaseGeometry):
         """
         self.__width = width
         self.__height = height
-        self.integer_validator("width", width)           
+        self.integer_validator("width", width)
         self.integer_validator("height", height)
