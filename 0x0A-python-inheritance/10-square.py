@@ -6,8 +6,9 @@ This module contains the classes:
 -Rectangle.
 """
 
+
 class Square(Rectangle):
-    ""
+    """
     Class that defines basic geometries.
     """
     def __init__(self, size):
