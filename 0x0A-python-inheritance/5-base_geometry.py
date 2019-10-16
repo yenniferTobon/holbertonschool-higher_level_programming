@@ -2,6 +2,8 @@
 """
 BaseGeometry module
 """
+
+
 class BaseGeometry:
     """
     Empty class.
