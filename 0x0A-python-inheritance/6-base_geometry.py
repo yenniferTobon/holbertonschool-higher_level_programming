@@ -2,6 +2,8 @@
 """
 BaseGeometry module
 """
+
+
 class BaseGeometry():
     """
     Class that defines basic geometries.
@@ -10,4 +12,4 @@ class BaseGeometry():
         """
         Area of a geometry, not implemented by default.
         """
-        raise Exception("area() is not implemented")   
+        raise Exception("area() is not implemented")
