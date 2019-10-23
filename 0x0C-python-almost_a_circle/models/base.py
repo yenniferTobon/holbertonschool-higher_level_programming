@@ -43,7 +43,7 @@ class Base():
                             list of Rectangle or list of Square instances
         """
         new_dict = []
-        with open(cls.__name__ + ".csv", "w", encoding="UTF-8") as f:
+        with open(cls.__name__ + ".json", "w", encoding="UTF-8") as f:
             if list_objs == []:
                 f.write(("[]"))
             else:
