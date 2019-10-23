@@ -1,10 +1,24 @@
 #!/usr/bin/python3
+"""Module to inherit from Base
+"""
+
+
 from models.base import Base
 
+
 class Rectangle(Base):
-    """Rectangle Class"""
+    """Rectangle class that inherits from Base"""
+
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Constructor of the Rectangle class
+            Args:
+                width (int): rectangle width
+                height (int): rectangle height
+                x (int): space left
+                y (int): space above
+                id (int): unique id
+        """
         super().__init__(id)
         self.width = width
         self.height = height
@@ -18,6 +32,8 @@ class Rectangle(Base):
  
     @width.setter
     def width(self, value):
+        """Width setter
+        """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -31,6 +47,8 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        """Width setter
+        """
         if type(value) is not int:
             raise TypeError("height must be an integer") 
         if value <= 0:
@@ -44,6 +62,8 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, x):
+        """X setter
+        """
         if type(x) is not int:
             raise TypeError("x must be an integer")
         if x < 0:
@@ -57,6 +77,8 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        """Y setter
+        """
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -67,19 +89,14 @@ class Rectangle(Base):
         """Funtion to return area - taks 4"""
         return self.__width * self.__height
   
-    def display(self):
-        """Funtion that prints un Rectangulo with # - task 5""" 
-        for row in range(self.__height):
-            for column in range(self.__width):
-                print("#", end="")
-            print()
-
     def __str__(self):
-        """Funtion to print info - task 6"""
+        """Funtion to print info - task 6
+           Returns [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
     def display(self):
-        """Funtion that prints un Rectangulo with # and empty- task 7"""
+        #Funtion that prints un Rectangulo with # and empty- task 7
         for row_Empty in range(self.__y):
             print()
         
@@ -90,8 +107,26 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def update(self, *argv):
-        """assigns an argument to each attribute - task 8"""
+    def update(self, *argv, **kwargs):
+        """Assigns an argument to each attribute or assigns a key/value
+            argument to attributes
+            Args:
+                *args: pointer to a argument list
+                **kwargs: double pointer to a dictionary: key/value
+        """
         attrib = ['id', 'width', 'height', 'x', 'y']
         for i in range(len(argv)):
             setattr(self, attrib[i], argv[i])
+
+        if kwargs is not None:
+            for i in range(len(attrib)):
+                if attrib[i] in kwargs:
+                    setattr(self, attrib[i], kwargs.get(attrib[i]))
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of a Rectangle
+        """
+        dict = {}
+        for key, value in vars(self).items():
+            dict[key.replace("_Rectangle__", "")] = value
+        return dict
