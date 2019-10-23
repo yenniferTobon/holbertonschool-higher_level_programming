@@ -42,11 +42,11 @@ class Base():
                 list_objs: list of instances who inherits of Base - example:
                             list of Rectangle or list of Square instances
         """
-        new_dict = []
         with open(cls.__name__ + ".json", "w", encoding="UTF-8") as f:
             if list_objs == []:
                 f.write(("[]"))
             else:
+                new_dict = []
                 for obj in list_objs:
                     new_dict.append(obj.to_dictionary())
                 f.write(cls.to_json_string(new_dict))
