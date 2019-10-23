@@ -42,7 +42,7 @@ class Base():
                 list_objs: list of instances who inherits of Base - example:
                             list of Rectangle or list of Square instances
         """
-        with open(cls.__name__ + ".csv", "w", encoding="UTF-8") as f:
+        with open(cls.__name__ + ".json", "w", encoding="UTF-8") as f:
             if list_objs == []:
                 f.write('[]')
             new_dict = []
