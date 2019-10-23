@@ -44,7 +44,7 @@ class Base():
         new_dict = []
         with open(cls.__name__ + ".json", "w", encoding="UTF-8") as f:
             if list_objs is None:
-                f.write(cls.to_json_string("[]"))
+                f.write("[]")
             else:
                 for obj in list_objs:
                     new_dict.append(obj.to_dictionary())
