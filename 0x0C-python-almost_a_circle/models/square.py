@@ -25,16 +25,17 @@ class Square(Rectangle):
         return self.width
 
     @size.setter
-    def size(self, size):
+    def size(self, value):
         """Size setter
         """
-        self.width = size
+        self.width = value
+        self.heigdt = value
 
     def __str__(self):
         """Return [Square] (<id>) <x>/<y> - <size>
         """
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
-                                                 self.y, self.width)
+        return "[{}] ({}) {}/{} - {}".format(
+                self.__class__.__name__, self.id, self.x, self.y, self.width)
 
     def update(self, *argv, **kwargs):
         """Assigns attributes -task 8
