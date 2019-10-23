@@ -56,8 +56,8 @@ class Base():
             Args:
                 json_string: string representing a list of dictionaries
         """
-        if json_string is None:
-            return "[]"
+        if json_string is None or len(json_string) == 0:
+            return []
         else:
             return json.loads(json_string)
 
@@ -84,7 +84,10 @@ class Base():
         new_list = []
         filename = str(cls.__name__) + ".json"
 
-        with open(filename, "r", encoding="UTF-8") as f:
-            for dict in Base.from_json_string(f.read()):
-                new_list.append(cls.create(**dict))
-            return new_list
+        try:
+            with open(filename, "r", encoding="UTF-8") as f:
+                for dict in Base.from_json_string(f.read()):
+                    new_list.append(cls.create(**dict))
+                return new_list
+        except FileNotFoundError:
+            return []
