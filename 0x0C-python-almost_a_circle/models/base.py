@@ -44,12 +44,11 @@ class Base():
         """
         with open(cls.__name__ + ".json", "w", encoding="UTF-8") as f:
             if list_objs == []:
-                f.write(("[]"))
-            else:
-                new_dict = []
-                for obj in list_objs:
-                    new_dict.append(obj.to_dictionary())
-                f.write(cls.to_json_string(new_dict))
+                f.write('[]')
+            new_dict = []
+            for obj in list_objs:
+                new_dict.append(obj.to_dictionary())
+            f.write(cls.to_json_string(new_dict))
 
     @staticmethod
     def from_json_string(json_string):
