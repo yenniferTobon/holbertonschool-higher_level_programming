@@ -29,7 +29,7 @@ class Square(Rectangle):
         """Size setter
         """
         self.width = value
-        self.heigdt = value
+        self.height = value
 
     def __str__(self):
         """Return [Square] (<id>) <x>/<y> - <size>
