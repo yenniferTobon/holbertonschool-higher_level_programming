@@ -47,7 +47,7 @@ class Base():
                 f.write('[]')
             new_dict = []
             for obj in list_objs:
-                new_dict.append(cls.to_dictionary(obj))
+                new_dict.append(obj.to_dictionary())
             f.write(cls.to_json_string(new_dict))
 
     @staticmethod
