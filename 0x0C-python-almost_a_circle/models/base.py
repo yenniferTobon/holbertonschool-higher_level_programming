@@ -16,7 +16,6 @@ class Base():
             Args:
                 id (int): unique id of the classes
         """
-        self.id = id
 
         if id is not None:
             self.id = id
@@ -85,7 +84,7 @@ class Base():
         filename = str(cls.__name__) + ".json"
 
         try:
-            with open(filename, "r", encoding="UTF-8") as f:
+            with open(filename, "r") as f:
                 for dict in Base.from_json_string(f.read()):
                     new_list.append(cls.create(**dict))
                 return new_list
