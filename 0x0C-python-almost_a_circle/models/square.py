@@ -18,12 +18,13 @@ class Square(Rectangle):
                 id (int): unique id
         """
         super().__init__(size, size, x, y, id)
+        self.size = size
 
     def __str__(self):
         """Return [Square] (<id>) <x>/<y> - <size>
         """
-        return '[{}] ({}) {}/{} - {}'.format(
-                self.__class__.__name__, self.id, self.x, self.y, self.width)
+        return '[Square] ({}) {}/{} - {}'.format(
+                self.id, self.x, self.y, self.width)
 
     @property
     def size(self):
