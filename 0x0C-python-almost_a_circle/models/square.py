@@ -19,6 +19,12 @@ class Square(Rectangle):
         """
         super().__init__(size, size, x, y, id)
 
+    def __str__(self):
+        """Return [Square] (<id>) <x>/<y> - <size>
+        """
+        return '[{}] ({}) {}/{} - {}'.format(
+                self.__class__.__name__, self.id, self.x, self.y, self.width)
+
     @property
     def size(self):
         """getter to size"""
@@ -30,12 +36,6 @@ class Square(Rectangle):
         """
         self.width = value
         self.height = value
-
-    def __str__(self):
-        """Return [Square] (<id>) <x>/<y> - <size>
-        """
-        return '[{}] ({}) {}/{} - {}'.format(
-                self.__class__.__name__, self.id, self.x, self.y, self.width)
 
     def update(self, *argv, **kwargs):
         """Assigns attributes -task 8
