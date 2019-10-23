@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Module to inherit from Base
-"""
+"""Module to inherit from Base"""
 
 
 from models.base import Base
@@ -8,7 +7,6 @@ from models.base import Base
 
 class Rectangle(Base):
     """Rectangle class that inherits from Base"""
-
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Constructor of the Rectangle class
@@ -24,12 +22,12 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-     
+
     @property
     def width(self):
         """getter for width"""
         return self.__width
- 
+
     @width.setter
     def width(self, value):
         """Width setter
@@ -38,8 +36,8 @@ class Rectangle(Base):
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError('width must be > 0')
-        self.__width = value    
-     
+        self.__width = value
+
     @property
     def height(self):
         """getter for height"""
@@ -50,7 +48,7 @@ class Rectangle(Base):
         """Width setter
         """
         if type(value) is not int:
-            raise TypeError("height must be an integer") 
+            raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
@@ -88,18 +86,20 @@ class Rectangle(Base):
     def area(self):
         """Funtion to return area - taks 4"""
         return self.__width * self.__height
-  
+
     def __str__(self):
         """Funtion to print info - task 6
            Returns [Rectangle] (<id>) <x>/<y> - <width>/<height>
         """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
+                                                       self.__y, self.__width,
+                                                       self.__height)
 
     def display(self):
-        #Funtion that prints un Rectangulo with # and empty- task 7
+        """Funtion that prints un Rectangulo with # and empty- task 7"""
         for row_Empty in range(self.__y):
             print()
-        
+
         for row in range(self.__height):
             for empty in range(self.__x):
                 print(" ", end="")
