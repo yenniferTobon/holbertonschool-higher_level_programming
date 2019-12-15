@@ -18,6 +18,6 @@ if __name__ == '__main__':
     for rows in c.fetchall():
         cities_name = rows[0] + ", " + cities_name
     cities_name = cities_name[:-2]
-    print("({})".format(cities_str))
+    print("({})".format(cities_name))
     c.close()
     myConnection.close()
