@@ -17,7 +17,7 @@ if __name__ == '__main__':
         ORDER BY cities.id", (argv[4],))
     myList = []
     for rows in c.fetchall():
-        cities_name = cities_name + ", " +rows[0]
+        cities_name = cities_name + ", " + rows[0]
     cities_name = cities_name[2:]
     print("{}".format(cities_name))
     c.close()
