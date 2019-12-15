@@ -11,7 +11,8 @@ if __name__ == '__main__':
             db=argv[2],
             user=argv[1], host='localhost', port=3306, password=argv[2])
     c = miConnection.cursor()
-    c.execute("SELECT id,name FROM states ORDER BY id ASC")
+    c.execute("SELECT * FROM states ORDER BY id ASC")
     for states in c.fetchall():
         print(states)
+    c.close()
     miConnection.close()
