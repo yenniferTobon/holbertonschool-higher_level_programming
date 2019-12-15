@@ -10,7 +10,10 @@ if __name__ == '__main__':
         password=argv[2], db=argv[3], port=3306, host='localhost')
     c = myConnection.cursor()
     c.execute(
-        "SELECT id, name FROM cities ORDER BY id ASC")
+        "SELECT cities.id, cities.name,states.name\
+        FROM cities, states\
+        WHERE cities.state_id = states.id\
+        ORDER BY cities.id ASC")
     for cyties in c.fetchall():
         print(cyties)
     c.close()
