@@ -10,6 +10,6 @@ Base = declarative_base()
 class State(Base):
     """ State class that inherits from Base class """
     __tablename__ = 'states'
-    id = sqlalchemy.Column(Integer, primary_key=True, autoincrement=True,
-        nullable=False, unique=True)
+
+    id = sqlalchemy.Column(Integer, primary_key=True, autoincrement=True)
     nombre = Column(String(128), nullable=False)
