@@ -14,10 +14,11 @@ if __name__ == '__main__':
         FROM cities JOIN states\
         ON cities.state_id = states.id\
         WHERE states.name= BINARY %s\
-        ORDER BY cities.id ASC", (argv[4],))
+        ORDER BY cities.id", (argv[4],))
+    myList = []
     for rows in c.fetchall():
-        cities_name = rows[0] + ", " + cities_name
-    cities_name = cities_name[:-2]
+        cities_name = cities_name + ", " +rows[0]
+    cities_name = cities_name[2:]
     print("{}".format(cities_name))
     c.close()
     myConnection.close()
