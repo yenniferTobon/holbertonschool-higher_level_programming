@@ -1,8 +1,17 @@
 #!/usr/bin/python3
-import MySQLdb
-miConnection=MySQLdb.connect(db ='hbtn_0e_0_usa', user='root', host='localhost', port=3306, password='')
-c=miConnection.cursor()
-c.execute("SELECT * FROM states ORDER BY id ASC")
-for states in c.fetchall():
-	print(states)
-miConnection.close()
+"""Script that lists all states from the database hbtn_0e_0_usa"""
+
+if __name__ == '__main__':
+    """ get data from db """
+
+    import MySQLdb
+    import sys
+    argv = sys.argv
+    miConnection = MySQLdb.connect(
+            db=argv[2],
+            user=argv[1], host='localhost', port=3306, password=argv[2])
+    c = miConnection.cursor()
+    c.execute("SELECT id,name FROM states ORDER BY id ASC")
+    for states in c.fetchall():
+        print(states)
+    miConnection.close()
