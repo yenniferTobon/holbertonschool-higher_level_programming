@@ -15,3 +15,4 @@ if __name__ == '__main__':
     for states in c.fetchall():
         print(states)
     c.close()
+    myConnection.close()
