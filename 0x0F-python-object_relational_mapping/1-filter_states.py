@@ -13,4 +13,5 @@ if __name__ == '__main__':
         "SELECT id, name FROM states WHERE name like 'N%' ORDER BY id ASC")
     for states in c.fetchall():
         print(states)
+    c.close()
     myConnection.close()
