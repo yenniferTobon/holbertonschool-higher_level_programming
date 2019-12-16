@@ -16,6 +16,6 @@ if __name__ == '__main__':
     db = Session()
 
     for city, state in db.query(State, City).filter(
-            State.id == City.state_id).order_by(City.id):
+            State.id == City.state_id).order_by(City.id).all():
         print("{}: ({}) {}".format(state.name, city.id, city.name))
     db.close()
