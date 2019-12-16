@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""prints the State object with the name passed as argument"""
+""" script that adds the State object “Louisiana” to the database"""
 
 import sys
 from model_state import Base, State
