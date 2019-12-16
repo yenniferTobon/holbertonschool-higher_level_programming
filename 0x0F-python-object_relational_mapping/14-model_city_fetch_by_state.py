@@ -17,5 +17,5 @@ if __name__ == '__main__':
 
     for city, state in db.query(State, City).filter(
             State.id == City.state_id).order_by(City.id).all():
-        print("{}: ({}) {}".format(state.name, city.id, city.name))
+        print("{}: ({}) {}".format(state.name, state.id, city.name))
     db.close()
