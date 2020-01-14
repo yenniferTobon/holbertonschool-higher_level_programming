@@ -8,7 +8,7 @@ if __name__ == "__main__":
 
     values = {'search': sys.argv[1]}
     url = 'https://swapi.co/api/people/'
-    response = requests.post(url, data=values)
+    response = requests.get(url, data=values)
     try:
         response.json()
         print("Number of results:", response.json().get("count"))
