@@ -10,8 +10,8 @@ if __name__ == "__main__":
         values = {'q': sys.argv[1]}
     else:
         values = {'q': ""}
-    url = 'http://b6a6580ced66.19.hbtn-cod.io:5000/search_user'
-    response = requests.post(url, values)
+    url = 'http://0.0.0.0:5000/search_user'
+    response = requests.post(url, data=values)
     try:
         if not response.json():
             print('No result')
