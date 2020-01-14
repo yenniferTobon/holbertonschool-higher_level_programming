@@ -2,7 +2,6 @@
 """takes in a string and sends a search request to the Star Wars API"""
 import requests
 import sys
-from requests.exceptions import HTTPError
 
 if __name__ == "__main__":
 
