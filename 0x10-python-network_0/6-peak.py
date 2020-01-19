@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ Python function to find peak number"""
+
+
 def find_peak(list):
     le = len(list)
     if le == 0:
