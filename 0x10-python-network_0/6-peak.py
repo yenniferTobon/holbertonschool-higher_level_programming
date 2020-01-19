@@ -7,5 +7,5 @@ def find_peak(list):
     mayor = 0
     for i in range(len(list)):
         if (list[i] > mayor):
-             mayor = list[i]
+            mayor = list[i]
     return mayor
