@@ -4,10 +4,10 @@
 const num = parseInt(process.argv[2]);
 
 function factorial (a) {
-  if (a === 1) {
+  if (a <= 1 || isNaN(a)) {
     return (1);
-  }else {
-    const totalFactorial = (a * factorial (a - 1));
+  } else {
+    const totalFactorial = (a * factorial(a - 1));
     return (totalFactorial);
   }
 }
