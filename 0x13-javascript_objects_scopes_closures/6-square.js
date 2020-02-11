@@ -4,12 +4,12 @@
 const SquareParent = require('./5-square');
 class Square extends SquareParent {
   charPrint (c) {
-    if (this.width === undefined) {
+    if (c === undefined) {
       super.print();
     } else {
       for (let h = 1; h <= this.width; h++) {
         for (let w = 1; w <= this.width; w++) {
-          process.stdout.write('c');
+          process.stdout.write(c);
         }
         console.log();
       }
