@@ -9,7 +9,7 @@ class Square extends SquareParent {
     } else {
       for (let h = 1; h <= this.width; h++) {
         for (let w = 1; w <= this.width; w++) {
-          process.stdout.write('C');
+          process.stdout.write('c');
         }
         console.log();
       }
