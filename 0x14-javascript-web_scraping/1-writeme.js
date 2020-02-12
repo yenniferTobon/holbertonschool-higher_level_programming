@@ -4,7 +4,7 @@
 var fs = require('fs');
 
 var data = process.argv[3];
-fs.writeFile(process.argv[2], data, function (err) {
+fs.writeFile(process.argv[2], data, 'utf-8', function (err) {
   if (err) {
     console.log(err);
   }
